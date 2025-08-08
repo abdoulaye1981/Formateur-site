@@ -1,157 +1,202 @@
-<!-- =================== 1. COURS & COMPÉTENCES =================== -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Abdoulaye Wakhab DIOP – Formateur Data Science</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary:#005f73;
+      --secondary:#0a9396;
+      --bg:#f5f7fa;
+      --card:#ffffff;
+      --radius:8px;
+    }
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:Inter,sans-serif;background:var(--bg);color:#222;line-height:1.6;}
+    header{background:var(--primary);color:#fff;padding:3rem 1rem;text-align:center;}
+    header h1{margin:.5rem 0 .25rem;font-size:2rem;}
+    header p{font-size:1.1rem;opacity:.9;}
+    nav{position:sticky;top:0;background:#fff;box-shadow:0 2px 4px rgba(0,0,0,.1);display:flex;gap:1rem;justify-content:center;padding:.75rem;}
+    nav a{color:var(--primary);text-decoration:none;font-weight:600;}
+    .section-title{text-align:center;padding:2.5rem 1rem 1.5rem;color:var(--primary);}
+    .grid{display:grid;gap:1.5rem;max-width:1000px;margin:auto;padding:0 1rem;}
+    .card{background:var(--card);border-radius:var(--radius);box-shadow:0 2px 8px rgba(0,0,0,.08);padding:1.5rem;display:flex;flex-direction:column;}
+    .card h3{margin-top:0;color:var(--primary);}
+    .card ul{margin:.5rem 0 1rem 1.2rem;}
+    .tag{align-self:start;font-size:.75rem;background:var(--secondary);color:#fff;padding:.25rem .6rem;border-radius:12px;margin-top:.5rem;}
+    form{max-width:600px;margin:3rem auto 4rem;background:var(--card);padding:2rem;border-radius:var(--radius);box-shadow:0 2px 12px rgba(0,0,0,.1);}
+    form label{display:block;margin:.8rem 0 .2rem;font-weight:600;}
+    form select,form input{width:100%;padding:.6rem;border:1px solid #bbb;border-radius:var(--radius);}
+    form button{margin-top:1.2rem;padding:.8rem 1.4rem;background:var(--primary);color:#fff;border:0;border-radius:var(--radius);font-size:1rem;cursor:pointer;}
+    form button:hover{background:#003d4d;}
+    footer{background:#e9ecef;text-align:center;padding:1.5rem;font-size:.9rem;}
+    @media(min-width:700px){.grid{grid-template-columns:repeat(2,1fr);}}
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Abdoulaye Wakhab DIOP</h1>
+  <p>Formateur & Encadrant Freelance – Data Science, Statistiques & Recherche<br>
+     Formations, encadrement de mémoires et soutenances – Licence & Master</p>
+</header>
+
+<nav>
+  <a href="#formations">Formations</a>
+  <a href="#encadrement">Encadrement</a>
+  <a href="#devis">Devis</a>
+</nav>
+
+<!-- =================== COURS =================== -->
 <section id="formations">
-  <h2>📚 Catalogue de cours – Sciences des données</h2>
-  <p>Programmes conçus pour <strong>établissements d’enseignement supérieur</strong> (Licence 3 – Doctorat) ou <strong>encadrements personnels</strong> (étudiants, doctorants, pros en reconversion).<br>
-     Quantum horaire, tarifs et modalités de paiement définis <em>après sélection du parcours</em>.</p>
+  <h2 class="section-title">📚 Catalogue de cours – Sciences des données</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Statistique & Probabilité DS</h3>
+      <ul>
+        <li>Lois usuelles & inférence</li><li>Tests, IC, bootstrap</li><li>Bayes de base</li>
+      </ul>
+      <span class="tag">20 h / 30 h / 40 h</span>
+    </div>
 
-  <div class="service">
-    <h3>Statistique & Probabilité – orientation Data Science</h3>
-    <ul>
-      <li>Maîtriser les lois usuelles (binomiale, Poisson, normale, gamma…)</li>
-      <li>Estimation ponctuelle / par intervalle</li>
-      <li>Tests d’hypothèses (Student, χ², ANOVA, non-paramétriques)</li>
-      <li>Inférence bayésienne de base (MCMC, priors)</li>
-      <li>Réduction de variance et bootstrap</li>
-    </ul>
-    <p><strong>Modalités :</strong> 20 h, 30 h ou 40 h – possibilité de répartition sur semestre.</p>
-  </div>
+    <div class="card">
+      <h3>Algèbre Linéaire DS</h3>
+      <ul>
+        <li>Matrices, SVD, PCA</li><li>Ridge/Lasso</li><li>Optimisation convexe</li>
+      </ul>
+      <span class="tag">15 h / 30 h</span>
+    </div>
 
-  <div class="service">
-    <h3>Algèbre Linéaire – orientation Data Science</h3>
-    <ul>
-      <li>Opérations matricielles et vectorielles (Numpy, R)</li>
-      <li>Décompositions (SVD, QR, Cholesky)</li>
-      <li>Valeurs propres & vecteurs propres (PCA, ACP)</li>
-      <li>Moindres carrés et régression ridge / lasso</li>
-      <li>Optimisation convexe pour ML</li>
-    </ul>
-    <p><strong>Modalités :</strong> 15 h (cours express) ou 30 h avec projet.</p>
-  </div>
+    <div class="card">
+      <h3>Analyse de données R & Python</h3>
+      <ul>
+        <li>Data wrangling</li><li>Stats descriptives avancées</li><li>Rapports auto</li>
+      </ul>
+      <span class="tag">21 h / 35 h</span>
+    </div>
 
-  <div class="service">
-    <h3>Analyse de données avec R et Python</h3>
-    <ul>
-      <li>Data wrangling : dplyr, pandas, data.table</li>
-      <li>Jointures complexes, reshape, pipeline tidy</li>
-      <li>Statistiques descriptives avancées, corrélation partielle</li>
-      <li>Rapports automatisés R Markdown & Jupyter</li>
-    </ul>
-    <p><strong>Modalités :</strong> 21 h ou 35 h incluant un jeu de données réel.</p>
-  </div>
+    <div class="card">
+      <h3>Machine Learning</h3>
+      <ul>
+        <li>Pipeline complet</li><li>Random Forest, XGBoost</li><li>SHAP & Lime</li>
+      </ul>
+      <span class="tag">35 h / 42 h</span>
+    </div>
 
-  <div class="service">
-    <h3>Machine Learning</h3>
-    <ul>
-      <li>Pipeline complet : split, scaling, modélisation, tuning, évaluation</li>
-      <li>Algorithmes : régression logistique, SVM, Random Forest, XGBoost, k-means</li>
-      <li>Cross-validation, grid search, pipelines scikit-learn</li>
-      <li>Interprétabilité (SHAP, Lime)</li>
-    </ul>
-    <p><strong>Modalités :</strong> 35 h ou 42 h, TP certifiants.</p>
-  </div>
+    <div class="card">
+      <h3>Recherche opérationnelle</h3>
+      <ul>
+        <li>PL / PLNE avec PuLP & OR-Tools</li><li>Méta-heuristiques</li><li>Supply-chain</li>
+      </ul>
+      <span class="tag">21 h / 28 h</span>
+    </div>
 
-  <div class="service">
-    <h3>Recherche opérationnelle</h3>
-    <ul>
-      <li>Modélisation PL / PLNE avec PuLP & OR-Tools</li>
-      <li>Sensibilité et dualité</li>
-      <li>Méta-heuristiques (recuit simulé, génétiques)</li>
-      <li>Application logistique & supply-chain</li>
-    </ul>
-    <p><strong>Modalités :</strong> 21 h ou 28 h avec étude de cas réelle.</p>
-  </div>
+    <div class="card">
+      <h3>Datavisualisation</h3>
+      <ul>
+        <li>ggplot2, seaborn, Plotly Dash</li><li>Power BI</li><li>Storytelling</li>
+      </ul>
+      <span class="tag">14 h / 21 h</span>
+    </div>
 
-  <div class="service">
-    <h3>Datavisualisation</h3>
-    <ul>
-      <li>Grammaire des graphiques (ggplot2, seaborn, Altair)</li>
-      <li>Dashboards interactifs : Plotly Dash, Streamlit, Power BI</li>
-      <li>Design visuel & storytelling</li>
-      <li>Publication web (HTML Widgets, Voilà)</li>
-    </ul>
-    <p><strong>Modalités :</strong> 14 h ou 21 h, portfolio visuel rendu.</p>
-  </div>
+    <div class="card">
+      <h3>Programmation R & Python</h3>
+      <ul>
+        <li>Classes, packages, tests</li><li>Environnements virtuels</li><li>Parallélisation</li>
+      </ul>
+      <span class="tag">14 h / 28 h</span>
+    </div>
 
-  <div class="service">
-    <h3>Programmation R et Python</h3>
-    <ul>
-      <li>Bases avancées : fonctions, classes, décorateurs, packages</li>
-      <li>Environnements virtuels, environnement R renv</li>
-      <li>Tests unitaires, logging, profiling</li>
-      <li>Parallélisation (multiprocessing, future.apply)</li>
-    </ul>
-    <p><strong>Modalités :</strong> 14 h (bootcamp) ou 28 h (parcours complet).</p>
-  </div>
+    <div class="card">
+      <h3>SQL & Business Intelligence</h3>
+      <ul>
+        <li>SQL avancé, CTE, index</li><li>Modèles dimensionnels</li><li>ETL, OLAP</li>
+      </ul>
+      <span class="tag">21 h / 35 h</span>
+    </div>
 
-  <div class="service">
-    <h3>SQL & Business Intelligence</h3>
-    <ul>
-      <li>SQL avancé : CTE, fenêtrage, triggers, optimisation d’index</li>
-      <li>Modèles dimensionnels (star & snowflake)</li>
-      <li>ETL simple avec dbt, Pentaho ou Talend</li>
-      <li>Cube OLAP & requêtes MDX (Power BI / SSAS)</li>
-    </ul>
-    <p><strong>Modalités :</strong> 21 h ou 35 h, jeu de données e-commerce fourni.</p>
-  </div>
+    <div class="card">
+      <h3>Deep Learning</h3>
+      <ul>
+        <li>CNN, RNN, Transformers</li><li>TensorFlow & PyTorch</li><li>Déploiement API</li>
+      </ul>
+      <span class="tag">35 h / 42 h</span>
+    </div>
 
-  <div class="service">
-    <h3>Deep Learning</h3>
-    <ul>
-      <li>Réseaux de neurones (MLP, CNN, RNN, LSTM, Transformers)</li>
-      <li>Frameworks : TensorFlow/Keras & PyTorch Lightning</li>
-      <li>Transfer learning, augmentation, callbacks</li>
-      <li>Déploiement : TensorFlow Serving, ONNX, API FastAPI</li>
-    </ul>
-    <p><strong>Modalités :</strong> 35 h ou 42 h, GPU cloud mis à disposition.</p>
-  </div>
+    <div class="card">
+      <h3>Exploration & Feature Engineering</h3>
+      <ul>
+        <li>Anomalies, imputation</li><li>Création variables</li><li>Sélection & pipeline</li>
+      </ul>
+      <span class="tag">14 h / 21 h</span>
+    </div>
 
-  <div class="service">
-    <h3>Exploration des données & Feature Engineering</h3>
-    <ul>
-      <li>Détection d’anomalies, imputation avancée</li>
-      <li>Création de variables (ratios, interactions, encodings)</li>
-      <li>Sélection de variables (Boruta, permutation importance)</li>
-      <li>Pipeline reproductible (scikit-learn)</li>
-    </ul>
-    <p><strong>Modalités :</strong> 14 h ou 21 h, dataset « maison » fourni.</p>
-  </div>
+    <div class="card">
+      <h3>Collecte & Pré-traitement</h3>
+      <ul>
+        <li>Scraping éthique</li><li>Nettoyage textuel</li><li>RGPD, validation</li>
+      </ul>
+      <span class="tag">14 h / 28 h</span>
+    </div>
 
-  <div class="service">
-    <h3>Collecte & Pré-traitement des données</h3>
-    <ul>
-      <li>Scraping éthique (BeautifulSoup, Scrapy, API REST)</li>
-      <li>Nettoyage textuel & structuration JSON/XML/CSV</li>
-      <li>Anonymisation RGPD, gestion du temps réel (Kafka)</li>
-      <li>Validation de schémas (pandera, pydantic)</li>
-    </ul>
-    <p><strong>Modalités :</strong> 14 h ou 28 h, projet data pipeline final.</p>
+    <div class="card">
+      <h3>Encadrement mémoire / thèse</h3>
+      <ul>
+        <li>Cadrage bibliographique</li><li>Méthodologie</li><li>Préparation soutenance</li>
+      </ul>
+      <span class="tag">Forfait 5 h / 10 h / 20 h</span>
+    </div>
   </div>
 </section>
 
-<!-- =================== 2. ENCADREMENT MÉMOIRE =================== -->
-<section id="encadrement">
-  <h2>🎓 Encadrement de mémoires & thèses</h2>
-  <div class="service">
-    <h3>Accompagnement personnalisé</h3>
-    <ul>
-      <li>Choix de sujet & cadrage bibliographique</li>
-      <li>Méthodologie (quantitative vs qualitative)</li>
-      <li>Relecture méthodique + corrections (LaTeX ou Word)</li>
-      <li>Préparation à la soutenance (slides, questions orales)</li>
-    </ul>
-    <p><strong>Modalités :</strong> forfait 5 h, 10 h ou 20 h, réglables mensuellement.<br>
-       <strong>Public :</strong> Licence 3, Master, Doctorat, écoles d’ingénieurs.</p>
-  </div>
+<!-- =================== FORMULAIRE =================== -->
+<section id="devis">
+  <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+    <h3>Obtenir mon devis & planning</h3>
+
+    <label for="cours">Choisissez le cours ou l’encadrement</label>
+    <select id="cours" name="cours" required>
+      <option disabled selected>-- Sélectionnez --</option>
+      <option>Statistique & Probabilité DS</option>
+      <option>Algèbre Linéaire DS</option>
+      <option>Analyse de données R & Python</option>
+      <option>Machine Learning</option>
+      <option>Recherche opérationnelle</option>
+      <option>Datavisualisation</option>
+      <option>Programmation R & Python</option>
+      <option>SQL & Business Intelligence</option>
+      <option>Deep Learning</option>
+      <option>Exploration & Feature Engineering</option>
+      <option>Collecte & Pré-traitement</option>
+      <option>Encadrement mémoire / thèse</option>
+    </select>
+
+    <label for="nom">Nom complet</label>
+    <input type="text" name="nom" required placeholder="Jean Dupont">
+
+    <label for="email">E-mail</label>
+    <input type="email" name="email" required placeholder="jean@mail.com">
+
+    <label for="tel">Téléphone (facultatif)</label>
+    <input type="tel" name="tel" placeholder="+33 6 12 34 56 78">
+
+    <label for="message">Objectifs & disponibilités</label>
+    <input type="text" name="message" placeholder="Début mars, niveau M2 marketing">
+
+    <button type="submit">Envoyer ma demande →</button>
+  </form>
 </section>
 
-<!-- =================== 3. CHATBOT =================== -->
-<!-- Choisissez l’un des deux scripts ci-dessous (Tidio ou Crisp) -->
-<!-- Tidio -->
-<script src="//code.tidio.co/YOUR_PUBLIC_KEY.js" async></script>
+<footer>
+  © 2025 Abdoulaye Wakhab DIOP – <a href="mailto:abdoulaye.wakhab.diop@pro.fr" style="color:var(--primary);">abdoulaye.wakhab.diop@pro.fr</a>
+</footer>
 
-<!-- Crisp (décommentez si vous préférez)
-<script type="text/javascript">
-  window.$crisp=[];window.CRISP_WEBSITE_ID="YOUR_ID";
-  (function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();
+<!-- =================== CHATBOT CRISP =================== -->
+<script>
+  window.$crisp=[];window.CRISP_WEBSITE_ID="YOUR_CRISP_ID";
+  (function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.head.appendChild(s);})();
 </script>
--->
+</body>
+</html>
