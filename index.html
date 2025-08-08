@@ -359,10 +359,10 @@
 
 <!-- =================== FORMULAIRE =================== -->
 <section id="devis">
-  <form action="https://formspree.io/f/mdoqyrva" method="POST">
+  <form action="https://formspree.io/f/mpwlovrg" method="POST">
     <h3>Obtenir mon devis & planning</h3>
 
-    <label for="cours">Choisissez le cours ou l’encadrement</label>
+    label for="cours">Choisissez le cours ou l’encadrement</label>
     <select id="cours" name="cours" required>
       <option disabled selected>-- Sélectionnez --</option>
       <option>Statistique & Probabilité DS</option>
@@ -378,6 +378,7 @@
       <option>Collecte & Pré-traitement</option>
       <option>Encadrement mémoire / thèse</option>
       <option>Mathématiques pour les classes scientifiques</option>
+      <option>Algorithmique</option>
     </select>
 
     <label for="nom">Nom complet</label>
@@ -398,7 +399,7 @@
 
 <footer>
   © 2025 Abdoulaye Wakhab DIOP – 
-  <a href="mailto:abdoulaye.wakhab.diop@pro.fr" style="color:var(--primary);">abdoulaye.wakhab.diop@pro.fr</a> | 
+  <a href="mailto:wakhabdiop@yahoo.fr" style="color:var(--primary);">wakhabdiop@yahoo.fr</a> | 
   <a href="tel:+221776175420" style="color:var(--primary);">+221 77 6 17 54 20</a> | 
   <a href="https://www.linkedin.com/in/abdoulaye-wakhab-diop-8b4403134/" target="_blank" style="color:var(--primary);">LinkedIn</a> | 
   <a href="https://www.youtube.com/@rendreaccessiblelesmaths7611/playlists" target="_blank" style="color:var(--primary);">YouTube</a>
@@ -420,7 +421,7 @@
   function sendMsg(){
     const msg = document.getElementById('chat-msg').value.trim();
     if(!msg) return;
-    window.location.href = `mailto:abdoulaye.wakhab.diop@pro.fr?subject=Question%20depuis%20le%20site&body=${encodeURIComponent(msg)}`;
+    window.location.href = `mailto:wakhabdiop@yahoo.fr?subject=Question%20depuis%20le%20site&body=${encodeURIComponent(msg)}`;
     box.style.display='none';
     document.getElementById('chat-msg').value='';
   }
