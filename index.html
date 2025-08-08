@@ -4,7 +4,7 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Abdoulaye Wakhab DIOP – Formateur Data Science</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400   ;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
     :root {
       --primary:#005f73;
@@ -33,6 +33,40 @@
     form button:hover{background:#003d4d;}
     footer{background:#e9ecef;text-align:center;padding:1.5rem;font-size:.9rem;}
     @media(min-width:700px){.grid{grid-template-columns:repeat(2,1fr);}}
+
+    /* Styles de la mini-boîte de dialogue */
+    #chat-toggle{
+      position:fixed;
+      bottom:20px;
+      right:20px;
+      background:var(--primary);
+      color:#fff;
+      border:none;
+      border-radius:50%;
+      width:60px;
+      height:60px;
+      font-size:24px;
+      cursor:pointer;
+      z-index:1000;
+      box-shadow:0 4px 10px rgba(0,0,0,.2);
+    }
+    #chat-box{
+      position:fixed;
+      bottom:90px;
+      right:20px;
+      width:300px;
+      background:#fff;
+      border:1px solid var(--primary);
+      border-radius:var(--radius);
+      box-shadow:0 4px 15px rgba(0,0,0,.15);
+      display:none;
+      flex-direction:column;
+      padding:1rem;
+      z-index:999;
+    }
+    #chat-box h4{margin:0 0 .5rem;color:var(--primary);}
+    #chat-box textarea{width:100%;resize:vertical;height:60px;border:1px solid #bbb;border-radius:var(--radius);padding:.5rem;margin-bottom:.5rem;}
+    #chat-box button{background:var(--primary);color:#fff;border:none;padding:.5rem 1rem;border-radius:var(--radius);cursor:pointer;}
   </style>
 </head>
 <body>
@@ -153,7 +187,7 @@
 
 <!-- =================== FORMULAIRE =================== -->
 <section id="devis">
-  <form action="https://formspree.io/f/mdoqyrva   " method="POST">
+  <form action="https://formspree.io/f/mdoqyrva" method="POST">
     <h3>Obtenir mon devis & planning</h3>
 
     <label for="cours">Choisissez le cours ou l’encadrement</label>
@@ -193,18 +227,26 @@
   © 2025 Abdoulaye Wakhab DIOP – <a href="mailto:abdoulaye.wakhab.diop@pro.fr" style="color:var(--primary);">abdoulaye.wakhab.diop@pro.fr</a>
 </footer>
 
-<!-- =================== CHATBOT CRISP =================== -->
-<!-- Chatbot Crisp -->
-<script type="text/javascript">
-  window.$crisp = [];
-  window.CRISP_WEBSITE_ID = "e8c9a5c7-2f2c-4f7e-9c1b-3e4a5b6c7d8e";
-  (function () {
-    var d = document;
-    var s = d.createElement("script");
-    s.src = "https://client.crisp.chat/l.js   ";
-    s.async = 1;
-    d.head.appendChild(s);
-  })();
+<!-- =================== MINI-BOÎTE DE DIALOGUE =================== -->
+<button id="chat-toggle" title="Discuter">💬</button>
+<div id="chat-box">
+  <h4>Besoin d’un renseignement ?</h4>
+  <textarea id="chat-msg" placeholder="Tapez votre question…"></textarea>
+  <button onclick="sendMsg()">Envoyer</button>
+</div>
+
+<script>
+  const toggle = document.getElementById('chat-toggle');
+  const box = document.getElementById('chat-box');
+  toggle.onclick = () => box.style.display = box.style.display === 'flex' ? 'none' : 'flex';
+
+  function sendMsg(){
+    const msg = document.getElementById('chat-msg').value.trim();
+    if(!msg) return;
+    window.location.href = `mailto:abdoulaye.wakhab.diop@pro.fr?subject=Question%20depuis%20le%20site&body=${encodeURIComponent(msg)}`;
+    box.style.display='none';
+    document.getElementById('chat-msg').value='';
+  }
 </script>
 </body>
 </html>
