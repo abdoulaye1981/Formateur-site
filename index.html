@@ -16,6 +16,7 @@
     *{box-sizing:border-box;margin:0;padding:0;}
     body{font-family:Inter,sans-serif;background:var(--bg);color:#222;line-height:1.6;}
     header{background:var(--primary);color:#fff;padding:3rem 1rem;text-align:center;}
+    header img{width:150px;border-radius:50%;margin-bottom:1rem;}
     header h1{margin:.5rem 0 .25rem;font-size:2rem;}
     header p{font-size:1.1rem;opacity:.9;}
     nav{position:sticky;top:0;background:#fff;box-shadow:0 2px 4px rgba(0,0,0,.1);display:flex;gap:1rem;justify-content:center;padding:.75rem;}
@@ -72,6 +73,7 @@
 <body>
 
 <header>
+  <img src="photo.jpg" alt="Abdoulaye Wakhab DIOP">
   <h1>Abdoulaye Wakhab DIOP</h1>
   <p>Formateur & Encadrant Freelance – Data Science, Statistiques & Recherche<br>
      Formations, encadrement de mémoires et soutenances – Licence & Master</p>
@@ -182,6 +184,44 @@
       </ul>
       <span class="tag">Forfait 5 h / 10 h / 20 h</span>
     </div>
+
+    <!-- Nouveaux cours de mathématiques -->
+    <div class="card">
+      <h3>Mathématiques pour les classes scientifiques</h3>
+      <ul>
+        <li>2S : Algèbre linéaire, Géométrie analytique</li>
+        <li>1S : Calcul différentiel, Probabilités</li>
+        <li>TS : Analyse numérique, Statistique descriptive</li>
+      </ul>
+      <span class="tag">2S / 1S / TS</span>
+    </div>
+  </div>
+</section>
+
+<!-- =================== ENCADREMENT =================== -->
+<section id="encadrement">
+  <h2 class="section-title">🎓 Encadrement des étudiants</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Encadrement mémoire de Licence</h3>
+      <ul>
+        <li>Choix du sujet et problématique</li>
+        <li>Méthodologie de recherche</li>
+        <li>Relecture et corrections</li>
+      </ul>
+      <span class="tag">Forfait 10 h / 20 h</span>
+    </div>
+
+    <div class="card">
+      <h3>Encadrement mémoire de Master</h3>
+      <ul>
+        <li>Choix du sujet et problématique</li>
+        <li>Méthodologie de recherche</li>
+        <li>Relecture et corrections</li>
+        <li>Préparation à la soutenance</li>
+      </ul>
+      <span class="tag">Forfait 20 h / 30 h</span>
+    </div>
   </div>
 </section>
 
@@ -205,6 +245,7 @@
       <option>Exploration & Feature Engineering</option>
       <option>Collecte & Pré-traitement</option>
       <option>Encadrement mémoire / thèse</option>
+      <option>Mathématiques pour les classes scientifiques</option>
     </select>
 
     <label for="nom">Nom complet</label>
